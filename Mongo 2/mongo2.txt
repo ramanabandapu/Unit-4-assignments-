@@ -1,0 +1,173 @@
+> use moviesDB
+switched to db moviesDB
+> show collections
+movies
+> db.movies.find({movie_name: {$ne: "Titanic"}}).pretty()
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef50"),
+        "movie_name" : "House",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : "2011-08",
+        "budget" : "$14167.92"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef51"),
+        "movie_name" : "Waste Land",
+        "movie_genre" : "Documentary",
+        "production_year" : "2009-03",
+        "budget" : "$15829.68"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef52"),
+        "movie_name" : "Triple Agent",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : "2003-12",
+        "budget" : "$13197.43"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef53"),
+        "movie_name" : "Pete Seeger: The Power of Song",
+        "movie_genre" : "Documentary",
+        "production_year" : "2007-05",
+        "budget" : "$16081.48"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef54"),
+        "movie_name" : "Angel Face",
+        "movie_genre" : "Crime|Drama|Film-Noir",
+        "production_year" : "1991-03",
+        "budget" : "$10651.64"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef55"),
+        "movie_name" : "Brand Upon the Brain!",
+        "movie_genre" : "Adventure|Fantasy|Mystery",
+        "production_year" : "2004-05",
+        "budget" : "$13557.99"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef56"),
+        "movie_name" : "Zabriskie Point",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : "2010-02",
+        "budget" : "$18806.99"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef57"),
+        "movie_name" : "Paradise for Three",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : "2000-08",
+        "budget" : "$17499.34"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef58"),
+        "movie_name" : "You Are So Beautiful (Je vous trouve très beau)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : "1999-03",
+        "budget" : "$16729.87"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef59"),
+        "movie_name" : "In the Navy",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : "2013-12",
+        "budget" : "$17990.16"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef5a"),
+        "movie_name" : "Bitch, The (La chienne)",
+        "movie_genre" : "Drama",
+        "production_year" : "2014-05",
+        "budget" : "$17872.47"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef5b"),
+        "movie_name" : "Detention",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : "2019-07",
+        "budget" : "$12857.31"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef5c"),
+        "movie_name" : "My Son, My Son, What Have Ye Done",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : "2013-08",
+        "budget" : "$10063.86"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef5d"),
+        "movie_name" : "Lovecraft: Fear of the Unknown",
+        "movie_genre" : "Documentary",
+        "production_year" : "2009-08",
+        "budget" : "$15145.74"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef5e"),
+        "movie_name" : "Klute",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : "2008-12",
+        "budget" : "$16746.81"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef5f"),
+        "movie_name" : "Object of Beauty, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : "2002-11",
+        "budget" : "$18827.76"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef60"),
+        "movie_name" : "Kill the Irishman",
+        "movie_genre" : "Action|Crime",
+        "production_year" : "1992-09",
+        "budget" : "$17150.57"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef61"),
+        "movie_name" : "Discreet Charm of the Bourgeoisie, The (Charme discret de la bourgeoisie, Le)",
+        "movie_genre" : "Comedy|Drama|Fantasy",
+        "production_year" : "1994-07",
+        "budget" : "$10892.59"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef62"),
+        "movie_name" : "Tape",
+        "movie_genre" : "Drama",
+        "production_year" : "2016-08",
+        "budget" : "$14736.91"
+}
+{
+        "_id" : ObjectId("622ae11f8be022e0ce44ef63"),
+        "movie_name" : "The Fuller Brush Man",
+        "movie_genre" : "Adventure|Comedy",
+        "production_year" : "2010-10",
+        "budget" : "$10989.73"
+}
+Type "it" for more
+
+>
+> db.movies.find({"movie_name": {$lt:"z"}}, {"movie_name": 1, "_id": 0}).sort({movie_name: -1})
+{ "movie_name" : "eXistenZ" }
+{ "movie_name" : "Zhou Yu's Train (Zhou Yu de huo che)" }
+{ "movie_name" : "Zandalee" }
+{ "movie_name" : "Zabriskie Point" }
+{ "movie_name" : "Yuva" }
+{ "movie_name" : "Young Guns II" }
+{ "movie_name" : "You Light Up My Life" }
+{ "movie_name" : "You Are So Beautiful (Je vous trouve très beau)" }
+{ "movie_name" : "Woman Obsessed" }
+{ "movie_name" : "Winter Solstice" }
+{ "movie_name" : "Windows" }
+{ "movie_name" : "Will Penny" }
+{ "movie_name" : "Wild Boys of the Road" }
+{ "movie_name" : "When the Cat's Away (Chacun cherche son chat)" }
+{ "movie_name" : "What Happens in Vegas..." }
+{ "movie_name" : "Werewolf of London" }
+{ "movie_name" : "Weekend (a.k.a. Le Week-end) (Week End)" }
+{ "movie_name" : "Weekend" }
+{ "movie_name" : "Web of Death, The" }
+{ "movie_name" : "We Are What We Are" }
+Type "it" for more
+>
+
+
