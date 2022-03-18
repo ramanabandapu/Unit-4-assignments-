@@ -7,7 +7,7 @@ const connect = () =>{
 
     return mongoose.connect(
 
-    "mongodb+srv://dhaval:dhaval_123@cluster0.ljuvz.mongodb.net/web14?retrywrites=true&w=maj"
+    "mongodb+srv://dhaval:dhaval_123@cluster0.ljuvz.mongodb.net/web14?retrywrites=true&w=majority"
 
     );
 };
